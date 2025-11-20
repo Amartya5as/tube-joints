@@ -1,0 +1,41 @@
+{
+  "name": "tube-joints",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/electron/main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "start:electron": "concurrently \"npm:start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "react-scripts build",
+    "build:electron": "npm run build && electron-builder",
+    "dist": "npm run build:electron",
+    "lint": "echo \"No linter configured\""
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.58.0",
+    "@react-three/fiber": "^9.0.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.158.0",
+    "three-csg-ts": "^2.2.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0",
+    "wait-on": "^7.0.1",
+    "react-scripts": "5.0.1"
+  },
+  "build": {
+    "appId": "com.yourname.tubejoints",
+    "files": [
+      "build/**/*",
+      "src/electron/main.js",
+      "node_modules/**"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
