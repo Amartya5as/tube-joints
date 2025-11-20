@@ -1,0 +1,11 @@
+html,body,#root { height:100%; margin:0; font-family: Arial, sans-serif; }
+.app { display:flex; height:100vh; }
+.sidebar { width:300px; padding:12px; border-right:1px solid #ddd; box-sizing:border-box; background:#f7f7f7;}
+.workspace { flex:1; position:relative; }
+.controls-row { display:flex; gap:8px; margin-bottom:8px; }
+.btn { padding:8px 10px; cursor:pointer; border-radius:6px; border:1px solid #ccc; background:white; }
+.small { padding:6px 8px; }
+.label { font-size:13px; margin-bottom:6px; }
+.prop-row { display:flex; gap:8px; margin-bottom:8px; align-items:center; }
+.input { padding:6px 8px; width:100%; border-radius:6px; border:1px solid #ccc; }
+.footer { position:absolute; bottom:8px; left:8px; background:rgba(255,255,255,0.9); padding:6px 8px; border-radius:6px; }
